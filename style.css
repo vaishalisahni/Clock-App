@@ -1,0 +1,240 @@
+/* Global Styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #333, #000); /* Dark gradient background */
+    color: #ccc; /* Light text color */
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+/* Main Container */
+main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #1e1e1e; /* Dark background for the container */
+    padding: 20px;
+    border-radius: 12px;
+    gap: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); /* Darker shadow */
+    max-width: 500px;
+    width: 90%;
+    margin: 20px auto;
+}
+
+/* Button Container */
+.btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.active-btn {
+    background-color: rgb(200, 36, 63) !important; /* Darker shade to indicate active */
+    /* border: 2px solid #fff; */
+  }
+
+/* Clock, Alarm, Stopwatch & Timer Containers */
+.clock-container,
+.alarm-container,
+.stopwatch-container,
+.timer-container {
+    padding: 20px;
+    background-color: #2a2a2a; /* Darker background */
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7); /* Darker shadow */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    
+}
+
+.alarm-container,
+.stopwatch-container,
+.timer-container {
+    display: none;
+}
+
+/* Headings */
+h2 {
+    font-size: 26px;
+    color: #fff; /* White text for titles */
+}
+
+/* Time & Date Styling */
+.time-date {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 22px;
+}
+
+.time-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff; /* White time color */
+    flex-wrap: wrap;
+}
+.time-container{
+    transition: all 0.5s ease;
+}
+.time-container span{
+    transition: all 0.5s ease;
+}
+
+.date-container {
+    font-size: 18px;
+    color: #aaa; /* Lighter color for date */
+}
+
+/* Alarm Selection */
+.select-alarm {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.select-alarm select {
+    padding: 8px;
+    font-size: 16px;
+    background-color: #333; /* Dark background for selects */
+    border: 1px solid #444; /* Darker border */
+    color: #fff; /* White text */
+    border-radius: 5px;
+}
+
+.set-alarm {
+    margin-top: 8px;
+}
+
+.time-container input {
+    display: flex;
+    width: 50px;
+    height: 45px;
+    font-size: 1.2rem;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background: white;
+    color: #333;
+    font-weight: bold;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    justify-content: center;
+}
+.time-container input[type="number"]::-webkit-inner-spin-button,
+.time-container input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Buttons */
+button {
+    padding: 12px 22px;
+    font-size: 18px;
+    /* font-weight: bold; */
+    cursor: pointer;
+    border: none;
+    background-color: #444; /* Darker button background */
+    color: #fff;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #666; /* Lighter button on hover */
+}
+
+button:disabled {
+    cursor: not-allowed; /* Show 'not-allowed' cursor */
+    opacity: 0.6; /* Reduce opacity */
+  }
+  
+/* Feature Buttons */
+.clock-btn,
+.alarm-btn,
+.stopwatch-btn,
+.timer-btn {
+    background-color: #007bff; /* Bright color for buttons */
+    color: #fff;
+    border-radius: 12px;
+    padding: 12px;
+    transition: all 0.3s ease;
+}
+
+.clock-btn:hover,
+.alarm-btn:hover,
+.stopwatch-btn:hover,
+.timer-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+.play-btn {
+    background-color: #4caf50; /* Green */
+    color: white;
+}
+
+.play-btn:hover {
+    background-color: #3e8e41;
+}
+
+/* Pause Button */
+.pause-btn {
+    background-color: #ff9800; /* Orange */
+    color: white;
+}
+
+.pause-btn:hover {
+    background-color: #e68900;
+}
+
+/* Reset Button */
+.reset-btn , .cancel-btn{
+    background-color: #d32f2f; /* Red */
+    color: white;
+}
+
+.reset-btn:hover , .cancel-btn:hover {
+    background-color: #b71c1c;
+}
+
+/* Initially Hidden Buttons */
+#stop-pause, 
+#stop-reset {
+    display: none;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .time-container {
+        font-size: 28px;
+    }
+
+    .time-date {
+        gap: 5px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .select-alarm {
+        flex-direction: column;
+    }
+}
