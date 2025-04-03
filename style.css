@@ -42,8 +42,9 @@ main {
     flex-wrap: wrap;
 }
 .active-btn {
-    background-color: rgb(200, 36, 63) !important; /* Darker shade to indicate active */
+    /* background-color: rgb(200, 36, 63) !important; Darker shade to indicate active */
     /* border: 2px solid #fff; */
+    text-decoration: underline;
   }
 
 /* Clock, Alarm, Stopwatch & Timer Containers */
